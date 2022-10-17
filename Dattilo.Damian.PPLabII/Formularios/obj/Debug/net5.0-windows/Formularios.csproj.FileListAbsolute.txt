@@ -1,0 +1,89 @@
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.exe
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.deps.json
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.runtimeconfig.json
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.runtimeconfig.dev.json
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.dll
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.pdb
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.AssemblyReference.cache
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmLoguin.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.GenerateResource.cache
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.AssemblyInfoInputs.cache
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.AssemblyInfo.cs
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.CoreCompileInputs.cache
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.dll
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\refint\Formularios.dll
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.pdb
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.genruntimeconfig.cache
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\ref\Formularios.dll
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmAdminInventario.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmMenuPrincipal.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.dll
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.pdb
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.CopyComplete
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmVenta.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmListado.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmNuevoProducto.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmCelular.resources
+C:\Users\usu\Desktop\PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmConfirmarVenta.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.exe
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.deps.json
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.runtimeconfig.json
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.runtimeconfig.dev.json
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.dll
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.pdb
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.dll
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.pdb
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.AssemblyReference.cache
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmAdminInventario.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmCelular.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmConfirmarVenta.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmListado.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmLoguin.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmMenuPrincipal.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmNuevoProducto.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmVenta.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.GenerateResource.cache
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.AssemblyInfoInputs.cache
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.AssemblyInfo.cs
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.CoreCompileInputs.cache
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.CopyComplete
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.dll
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\refint\Formularios.dll
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.pdb
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.genruntimeconfig.cache
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\ref\Formularios.dll
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmTelevisor.resources
+C:\Users\usu\Desktop\Personal PPLabII 2 cuat 2022\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmPC.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.exe
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.deps.json
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.runtimeconfig.json
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.runtimeconfig.dev.json
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.dll
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Formularios.pdb
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.dll
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.pdb
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.AssemblyReference.cache
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmAdminInventario.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmCelular.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmConfirmarVenta.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmEstadisticas.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmListado.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmLoguin.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmMenuPrincipal.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmNuevoProducto.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmPC.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmTelevisor.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmVenta.resources
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.GenerateResource.cache
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.AssemblyInfoInputs.cache
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.AssemblyInfo.cs
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.CoreCompileInputs.cache
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.CopyComplete
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.dll
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\refint\Formularios.dll
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.pdb
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.genruntimeconfig.cache
+C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\ref\Formularios.dll
