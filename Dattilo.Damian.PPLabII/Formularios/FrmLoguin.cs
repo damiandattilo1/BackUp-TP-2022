@@ -29,9 +29,9 @@ namespace Formularios
         /// <param name="e"></param>
         private void btnLoguin_Click(object sender, EventArgs e)
         {
-            switch(Loguin.Loguearse(txtUsuario.Text, txtPassword.Text))
+            switch(Cuenta.IniciarSesion(txtUsuario.Text, txtPassword.Text).TipoUsuario)
             {
-                case 0:
+                case eTipoUsuario.Dueño:
                     {
                         FrmMenuPrincipal menu = new FrmMenuPrincipal();
                         this.Hide();
@@ -40,7 +40,7 @@ namespace Formularios
                         break;
 
                     }
-                case 1:
+                case eTipoUsuario.Vendedor:
                     {
                         this.Hide();
                         FrmVenta frmVenta = new FrmVenta(false);
@@ -48,7 +48,7 @@ namespace Formularios
                         this.Close();
                         break;
                     }
-                case 2:
+                case eTipoUsuario.Contador:
                     {
                         this.Hide();
                         FrmEstadisticas frmEstadisticas = new FrmEstadisticas();
@@ -56,7 +56,7 @@ namespace Formularios
                         this.Close();
                         break;
                     }
-                case -1:
+                default:
                     {
                         MessageBox.Show("Usuario o password incorrecto/s", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;

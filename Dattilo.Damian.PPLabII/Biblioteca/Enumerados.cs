@@ -12,6 +12,6 @@ public enum eDisco { SSD, HDD}
 
 public enum eResolucion { UHD, HD, Standard }
 
-public enum eUsuario { Dueño, Vendedor}
+public enum eTipoUsuario { Dueño, Vendedor, Contador, Invalido}
 
 public enum eTag { Telefonia, Informatica, Audiovisual}
