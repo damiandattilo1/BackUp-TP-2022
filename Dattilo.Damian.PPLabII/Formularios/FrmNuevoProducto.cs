@@ -16,16 +16,15 @@ namespace Formularios
     /// </summary>
     public partial class FrmNuevoProducto : Form
     {
-        private Deposito deposito;
-        public FrmNuevoProducto(Deposito deposito)
+        public FrmNuevoProducto()
         {
             InitializeComponent();
-            this.deposito = deposito;
+      
         }
 
         private void btnCelular_Click(object sender, EventArgs e)
         {
-            FrmCelular frmCelular = new FrmCelular(deposito);
+            FrmCelular frmCelular = new FrmCelular();
             this.Hide();
             frmCelular.ShowDialog();
             this.Show();
@@ -33,7 +32,7 @@ namespace Formularios
 
         private void btnTelevisor_Click(object sender, EventArgs e)
         {
-            FrmTelevisor frmTelevisor = new FrmTelevisor(deposito);
+            FrmTelevisor frmTelevisor = new FrmTelevisor();
             this.Hide();
             frmTelevisor.ShowDialog();
             this.Show();
@@ -41,7 +40,7 @@ namespace Formularios
 
         private void btnPC_Click(object sender, EventArgs e)
         {
-            FrmPC frmPc = new FrmPC(deposito);
+            FrmPC frmPc = new FrmPC();
             this.Hide();
             frmPc.ShowDialog();
             this.Show();

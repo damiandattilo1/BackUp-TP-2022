@@ -91,19 +91,6 @@ namespace Biblioteca
             return !(pc1 == pc2);
         }
 
-        /// <summary>
-        /// Polimorfismo de Equals
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            bool retorno = false;
-            if (obj is not null && obj is PC)
-            {
-                retorno = ((PC)obj == this);
-            }
-            return retorno;
-        }
+        
     }
 }

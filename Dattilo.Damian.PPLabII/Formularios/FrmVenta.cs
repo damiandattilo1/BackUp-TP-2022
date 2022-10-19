@@ -13,12 +13,10 @@ namespace Formularios
 {
     public partial class FrmVenta : Form
     {
-        private Deposito deposito;
         private bool esDueño;
-        public FrmVenta(Deposito deposito, bool esDueño)
+        public FrmVenta(bool esDueño)
         {
             InitializeComponent();
-            this.deposito = deposito;
             this.esDueño = esDueño;
         }
 
@@ -34,7 +32,7 @@ namespace Formularios
         private void CargarDatos()
         {
             lstProductos.Items.Clear();
-            foreach (Producto item in deposito.Productos)
+            foreach (Producto item in Deposito.Productos)
             {
                 lstProductos.Items.Add(item);
             }

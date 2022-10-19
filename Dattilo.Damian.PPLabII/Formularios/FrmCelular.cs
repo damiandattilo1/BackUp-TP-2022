@@ -13,11 +13,9 @@ namespace Formularios
 {
     public partial class FrmCelular : Form
     {
-        private Deposito deposito;
-        public FrmCelular(Deposito deposito)
+        public FrmCelular()
         {
             InitializeComponent();
-            this.deposito = deposito;
         }
 
         /// <summary>
@@ -74,13 +72,13 @@ namespace Formularios
             if (Validar())
             {
                 Celular celular = new Celular(int.Parse(txtId.Text),(eMarca) cmbMarca.SelectedItem, txtModelo.Text,(eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text),int.Parse(txtMemoria.Text), (eSistemaCelular)cmbSistema.SelectedItem,(eResolucionCamara) cmbResolucion.SelectedItem, liberado);
-                if(deposito == celular)
+                if(Deposito.BuscarProducto(celular) is not null)
                 {
                     MessageBox.Show("El celular ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    deposito = deposito + celular;
+                    Deposito.AgregarProducto(celular);
                     MessageBox.Show("Se ha agregado el celular exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);   
 
                 }

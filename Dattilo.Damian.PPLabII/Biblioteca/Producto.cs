@@ -143,65 +143,8 @@ namespace Biblioteca
             return !(p1 == p2);
         }
 
-        /// <summary>
-        /// Polimorfismo de Equals
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            bool retorno = false;
-            if (obj is not null && obj is Deposito)
-            {
-                retorno = ((Deposito)obj == this);
-            }
-            return retorno;
-        }
-
-        /// <summary>
-        /// Busca un producto en un deposito y suma o resta el stock (segun el booleano recibido por parametro). Cuando el stock llega a cero, se elimina el producto del deposito
-        /// </summary>
-        /// <param name="d"></param> Deposito 
-        /// <param name="esSuma"></param> Booleano que contiene true si el stock se debe sumar o false si el stock se debe restar
-        /// <returns></returns> Indica si el producto se encontro y se pudo sumar o restar el stock
-        public bool ModificarStock(Deposito d, bool esSuma)
-        {
-            Producto producto = BuscarProducto(d);
-            if(d is not null && producto is not null && esSuma)
-            {
-                producto.Stock++; 
-                return true;
-            }
-            else if(!esSuma)
-            {
-                producto.Stock--;
-                return true;
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Busca la instancia de producto en la lista de un deposito
-        /// </summary>
-        /// <param name="deposito"></param>
-        /// <returns></returns>
-
-        private Producto BuscarProducto(Deposito deposito)
-        {
-            if(deposito is not null)
-            {
-                foreach(Producto item in deposito.Productos)
-                {
-                    if(item == this)
-                    {
-                        return item;
-                    }
-                }
-            }
-            return null;
-        }
-
         
+
 
 
     }

@@ -13,12 +13,12 @@ namespace Formularios
 {
     public partial class FrmTelevisor : Form
     {
-        private Deposito deposito;
+        
 
-        public FrmTelevisor(Deposito deposito)
+        public FrmTelevisor()
         {
             InitializeComponent();
-            this.deposito = deposito;
+            
         }
 
         /// <summary>
@@ -40,13 +40,13 @@ namespace Formularios
             if (Validar())
             {
                 Televisor televisor = new Televisor(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
-                if (deposito == televisor)
+                if (Deposito.BuscarProducto(televisor) is not null)
                 {
                     MessageBox.Show("El televisor ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    deposito = deposito + televisor;
+                    Deposito.AgregarProducto(televisor);
                     MessageBox.Show("Se ha agregado el televisor exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }

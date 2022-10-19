@@ -16,11 +16,10 @@ namespace Formularios
     /// </summary>
     public partial class FrmLoguin : Form
     {
-        Deposito deposito;
+        
         public FrmLoguin()
         {
             InitializeComponent();
-            this.deposito = new Deposito(50);
         }
 
         /// <summary>
@@ -34,7 +33,7 @@ namespace Formularios
             {
                 case 0:
                     {
-                        FrmMenuPrincipal menu = new FrmMenuPrincipal(deposito);
+                        FrmMenuPrincipal menu = new FrmMenuPrincipal();
                         this.Hide();
                         menu.ShowDialog();
                         this.Close();
@@ -44,7 +43,7 @@ namespace Formularios
                 case 1:
                     {
                         this.Hide();
-                        FrmVenta frmVenta = new FrmVenta(deposito, false);
+                        FrmVenta frmVenta = new FrmVenta(false);
                         frmVenta.ShowDialog();
                         this.Close();
                         break;
@@ -52,7 +51,7 @@ namespace Formularios
                 case 2:
                     {
                         this.Hide();
-                        FrmEstadisticas frmEstadisticas = new FrmEstadisticas(deposito);
+                        FrmEstadisticas frmEstadisticas = new FrmEstadisticas();
                         frmEstadisticas.ShowDialog();
                         this.Close();
                         break;
@@ -94,9 +93,9 @@ namespace Formularios
             Televisor t2 = new Televisor(1444, eMarca.Philips, "ph8471",eTag.Audiovisual, 100000, 42, eSistemaTV.AndroidTV, eResolucion.UHD, true);
             PC p3 = new PC(1818, eMarca.HP, "HP142",eTag.Informatica, 120000, 500, 8, eSistemaPC.Windows, eDisco.HDD);
 
-            deposito = deposito + c1;
-            deposito = deposito + t2;
-            deposito = deposito + p3;
+            Deposito.AgregarProducto(c1);
+            Deposito.AgregarProducto(t2);
+            Deposito.AgregarProducto(p3);
 
 
         }
@@ -105,6 +104,14 @@ namespace Formularios
         {
             txtUsuario.Text = Loguin.UsuContador;
             txtPassword.Text = Loguin.PassContador;
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmListado frmListado = new FrmListado();
+            frmListado.ShowDialog();
+            this.Close();
         }
     }
 }

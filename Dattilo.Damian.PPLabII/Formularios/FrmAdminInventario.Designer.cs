@@ -32,7 +32,6 @@
             this.btnSumarStock = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnVender = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProductos
@@ -74,23 +73,12 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnVender
-            // 
-            this.btnVender.Location = new System.Drawing.Point(669, 400);
-            this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(190, 58);
-            this.btnVender.TabIndex = 8;
-            this.btnVender.Text = "Vender";
-            this.btnVender.UseVisualStyleBackColor = true;
-            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
-            // 
             // FrmAdminInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1252, 488);
-            this.Controls.Add(this.btnVender);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSumarStock);
@@ -109,6 +97,5 @@
         private System.Windows.Forms.Button btnSumarStock;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnVender;
     }
 }

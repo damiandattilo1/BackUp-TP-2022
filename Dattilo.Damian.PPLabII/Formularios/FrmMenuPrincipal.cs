@@ -13,11 +13,11 @@ namespace Formularios
 {
     public partial class FrmMenuPrincipal : Form
     {
-        Deposito deposito;
-        public FrmMenuPrincipal(Deposito deposito)
+        
+        public FrmMenuPrincipal()
         {
             InitializeComponent();
-            this.deposito = deposito;
+            
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Formularios
         /// <param name="e"></param>
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            FrmAdminInventario frmAdminInventario = new FrmAdminInventario(deposito);
+            FrmAdminInventario frmAdminInventario = new FrmAdminInventario();
             this.Hide();
             frmAdminInventario.ShowDialog();
             this.Show();
@@ -40,7 +40,7 @@ namespace Formularios
         /// <param name="e"></param>
         private void btnVenta_Click(object sender, EventArgs e)
         {
-            FrmVenta formVenta = new FrmVenta(deposito, true);
+            FrmVenta formVenta = new FrmVenta(true);
             this.Hide();
             formVenta.ShowDialog();
             this.Show();

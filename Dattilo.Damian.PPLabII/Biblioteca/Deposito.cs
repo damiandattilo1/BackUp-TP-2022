@@ -6,59 +6,47 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
-    public class Deposito
+    public static class Deposito
     {
         /// <summary>
         /// Lista de Producto y capacidad maxima del deposito
         /// </summary>
-        private List<Producto> productos;
-        private int capacidadMaxima;
+        private static List<Producto> productos;
+        private static int capacidadMaxima;
         private static string nombreComercio;
 
         /// <summary>
         /// Propiedades
         /// </summary>
-        public List<Producto> Productos
+        public static List<Producto> Productos
         {
             get { return productos; }
 
         }
 
-        public int CapacidadMaxima
+        public static int CapacidadMaxima
         {
             get { return capacidadMaxima; }
             set { capacidadMaxima = value; }
         }
 
-        public string NombreComercio
+        public static string NombreComercio
         {
             get { return nombreComercio; }
         }
 
-        /// <summary>
-        /// Inicializa el nombre del comercio
-        /// </summary>
-        static Deposito()
-        {
-            nombreComercio = "Electronica Ultra";
-        }
 
-        /// <summary>
-        /// Constructor privado que inicializa la lista de productos
-        /// </summary>
-       
-        private Deposito()
-        {
-            this.productos = new List<Producto>();
-        }
+        
 
         /// <summary>
         /// Constructor publico que inicializa la capacidad maxima e invoca al constructor privado
         /// </summary>
         /// <param name="capacidadMaxima"></param>
-        public Deposito(int capacidadMaxima) :this()
+        static Deposito()
         {
-            this.capacidadMaxima = capacidadMaxima;
+            capacidadMaxima = 50;
+            productos = new List<Producto>();
+            nombreComercio = "Electronica Ultra";
         }
 
         /// <summary>
@@ -67,20 +55,26 @@ namespace Biblioteca
         /// <param name="d"></param> deposito
         /// <param name="p"></param> producto
         /// <returns></returns>
-        public static Deposito operator +(Deposito d, Producto p)
+        public static bool AgregarProducto(Producto p)
         {
-            bool existe;
-            
-            if(d is not null && p is not null)
+            Producto aux;
+
+            if (p is not null)
             {
-                existe = p.ModificarStock(d, true);
-                if (!existe)
+                aux = Deposito.BuscarProducto(p);
+                if (aux is null)
                 {
-                    d.productos.Add(p);
+                    Deposito.Productos.Add(p);
+
                 }
-                
+                else
+                {
+                    aux.Stock++;
+                }
+                return true;
+
             }
-            return d;
+            return false;
         }
 
         /// <summary>
@@ -90,48 +84,35 @@ namespace Biblioteca
         /// <param name="p"></param>
         /// <returns></returns>
         //public static Deposito operator -(Deposito d, Producto p)
-        public static bool operator -(Deposito d, Producto p)
+        public static bool RemoverProducto(Producto p)
         {
-            bool existe = p.ModificarStock(d, false);
-
-            return existe;
+            Producto aux = Deposito.BuscarProducto(p);
+            if (p is not null && aux is not null)
+            {
+                if (aux.Stock > 0)
+                {
+                    aux.Stock--;
+                    return true;
+                }
+            }
+            return false;
         }
 
-        /// <summary>
-        /// Retorna si el producto recibido por parametro ya se encuentra en el deposito
-        /// </summary>
-        /// <param name="deposito"></param>
-        /// <param name="producto"></param>
-        /// <returns></returns>
-        public static bool operator ==(Deposito deposito, Producto producto)
+        public static Producto BuscarProducto(Producto p)
         {
-            if(deposito is not null && producto is not null)
+            if (p is not null)
             {
-                foreach(Producto item in deposito.Productos)
+                foreach (Producto item in Deposito.Productos)
                 {
-                    if (item.Equals(producto))
+                    if (p == item)
                     {
-                        return true;
+                        return p;
                     }
                 }
             }
-
-            return false;
-        }
-        
-        public static bool operator !=(Deposito deposito, Producto producto)
-        {
-            return !(deposito == producto);
+            return null;
         }
 
-        
-        /*Celular c1 = new Celular(1234, eMarca.Samsung, "sj474", eTag.Telefonia, 80000, 128, eSistemaCelular.Android, eResolucionCamara.Mp12, true);
-        Televisor t2 = new Televisor(1444, eMarca.Philips, "ph8471", eTag.Audiovisual, 100000, 42, eSistemaTV.AndroidTV, eResolucion.UHD, true);
-        PC p3 = new PC(1818, eMarca.HP, "HP142", eTag.Informatica, 120000, 500, 8, eSistemaPC.Windows, eDisco.HDD);
-
-        deposito = deposito + c1;
-            deposito = deposito + t2;
-            deposito = deposito + p3;*/
 
     }
 }

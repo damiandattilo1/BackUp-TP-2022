@@ -112,19 +112,6 @@ namespace Biblioteca
             return !(t1 == t2);
         }
 
-        /// <summary>
-        /// Polimorfismo de Equals
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            bool retorno = false;
-            if(obj is not null && obj is Televisor)
-            {
-                retorno = ((Televisor)obj == this);
-            }
-            return retorno;
-        }
+        
     }
 }

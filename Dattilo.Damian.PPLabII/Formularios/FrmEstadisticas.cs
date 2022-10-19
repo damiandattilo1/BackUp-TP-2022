@@ -14,24 +14,18 @@ namespace Formularios
 {
     public partial class FrmEstadisticas : Form
     {
-        private Deposito deposito;
         
-
-        private FrmEstadisticas()
-        {
-            
-        }
-        public FrmEstadisticas(Deposito deposito) :this()
+        public FrmEstadisticas() 
         {
             InitializeComponent();
-            this.deposito = deposito;
+  
             
         }
 
         private int CalcularCantidadVentas()
         {
             int cont = 0;
-            foreach(Producto item in deposito.Productos)
+            foreach(Producto item in Deposito.Productos)
             {
                 cont += item.Ventas;
             }
@@ -44,7 +38,7 @@ namespace Formularios
 
             int cantAudio = 0;
 
-            foreach(Producto item in deposito.Productos)
+            foreach(Producto item in Deposito.Productos)
             {
                 if(item.Ventas > 0)
                 {
@@ -70,7 +64,7 @@ namespace Formularios
 
             int cantInfo = 0;
 
-            foreach (Producto item in deposito.Productos)
+            foreach (Producto item in Deposito.Productos)
             {
                 if (item.Ventas > 0)
                 {
@@ -96,7 +90,7 @@ namespace Formularios
 
             int cantTelefonia = 0;
 
-            foreach (Producto item in deposito.Productos)
+            foreach (Producto item in Deposito.Productos)
             {
                 if (item.Ventas > 0)
                 {
@@ -119,7 +113,7 @@ namespace Formularios
         private double CalcularGananciaTotal()
         {
             double acumGanancia = 0;
-            foreach(Producto item in deposito.Productos)
+            foreach(Producto item in Deposito.Productos)
             {
                 acumGanancia += (item.Ventas * item.Precio);
             }
@@ -131,7 +125,7 @@ namespace Formularios
         {
             Producto masVendido = null;
             bool primero = false;
-            foreach(Producto item in deposito.Productos)
+            foreach(Producto item in Deposito.Productos)
             {
                 if(item.Tag == eTag.Telefonia)
                 {
@@ -158,7 +152,7 @@ namespace Formularios
         {
             Producto masVendido = null;
             bool primero = false;
-            foreach (Producto item in deposito.Productos)
+            foreach (Producto item in Deposito.Productos)
             {
                 if(item.Tag == eTag.Informatica)
                 {
@@ -185,7 +179,7 @@ namespace Formularios
         {
             Producto masVendido = null;
             bool primero = false;
-            foreach (Producto item in deposito.Productos)
+            foreach (Producto item in Deposito.Productos)
             {
                 if (item.Tag == eTag.Telefonia)
                 {

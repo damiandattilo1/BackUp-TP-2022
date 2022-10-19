@@ -13,11 +13,11 @@ namespace Formularios
 {
     public partial class FrmPC : Form
     {
-        private Deposito deposito;
-        public FrmPC(Deposito deposito)
+        
+        public FrmPC()
         {
             InitializeComponent();
-            this.deposito = deposito;
+            
         }
         /// <summary>
         /// evento load donde se inicializan todos los comboBox
@@ -59,13 +59,13 @@ namespace Formularios
             {
                 PC pc = new PC(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtMemoriaDisco.Text), int.Parse(txtMemoriaRam.Text),(eSistemaPC)cmbSistOp.SelectedItem, (eDisco)cmbDisco.SelectedItem);
 
-                if (deposito == pc)
+                if (Deposito.BuscarProducto(pc) is not null)
                 {
                     MessageBox.Show("La pc ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    deposito = deposito + pc;
+                    Deposito.AgregarProducto(pc);
                     MessageBox.Show("Se ha agregado la PC exitosamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }

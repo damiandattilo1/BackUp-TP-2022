@@ -14,16 +14,14 @@ namespace Formularios
     public partial class FrmAdminInventario : Form
     {
         
-        Deposito deposito;
         
         /// <summary>
         /// Constructor publico del formulario que recibe el deposito para asignar
         /// </summary>
         /// <param name="deposito"></param>
-        public FrmAdminInventario(Deposito deposito)
+        public FrmAdminInventario()
         {
             InitializeComponent();
-            this.deposito = deposito;
         }
 
         /// <summary>
@@ -66,7 +64,7 @@ namespace Formularios
         private void CargarDatos()
         {
             lstProductos.Items.Clear();
-            foreach (Producto item in deposito.Productos)
+            foreach (Producto item in Deposito.Productos)
             {
                 lstProductos.Items.Add(item);
             }
@@ -79,40 +77,13 @@ namespace Formularios
         /// <param name="e"></param>
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FrmNuevoProducto frmNuevoProducto = new FrmNuevoProducto(deposito);
+            FrmNuevoProducto frmNuevoProducto = new FrmNuevoProducto();
             this.Hide();
             frmNuevoProducto.ShowDialog();
             CargarDatos();
             this.Show();
         }
 
-        /// <summary>
-        /// Evento del boton vender que administra la venta
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnVender_Click(object sender, EventArgs e)
-        {
-            Producto producto = lstProductos.SelectedItem as Producto;
-            if (producto is not null)
-            {
-                if (producto.Stock > 0)
-                {
-                    FrmConfirmarVenta confirmar = new FrmConfirmarVenta(lstProductos.SelectedItem as Producto);
-                    this.Hide();
-                    confirmar.ShowDialog();
-                    CargarDatos();
-                    this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("El producto no cuenta con stock", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
+        
     }
 }
