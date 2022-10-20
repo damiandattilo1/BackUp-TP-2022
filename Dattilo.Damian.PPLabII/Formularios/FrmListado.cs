@@ -34,6 +34,17 @@ namespace Formularios
             lbl3.Text = "SistemaOperativo";
             lbl4.Text = "Resolucion";
 
+            ClearComboBox();
+
+            cmb1.Items.Add(eSistemaTV.AndroidTV);
+            cmb1.Items.Add(eSistemaTV.Tizen);
+            cmb1.Items.Add(eSistemaTV.Linux);
+
+            cmb2.Items.Add(eResolucion.Standard);
+            cmb2.Items.Add(eResolucion.HD);
+            cmb2.Items.Add(eResolucion.UHD);
+
+
             cbx1.Visible = true;
             txt1.Visible = false;
             txt2.Visible = true;
@@ -58,12 +69,12 @@ namespace Formularios
             lbl4.Text = "Disco";
 
             ClearComboBox();
-           /* cmbDisco.Items.Add(eDisco.SSD);
-            cmbDisco.Items.Add(eDisco.HDD);
+            cmb2.Items.Add(eDisco.SSD);
+            cmb2.Items.Add(eDisco.HDD);
 
 
-            cmbSistOp.Items.Add(eSistemaPC.Linux);
-            cmbSistOp.Items.Add(eSistemaPC.Windows);*/
+            cmb1.Items.Add(eSistemaPC.Linux);
+            cmb1.Items.Add(eSistemaPC.Windows);
 
             cbx1.Visible = false;
             txt1.Visible = true;
@@ -89,13 +100,13 @@ namespace Formularios
 
             ClearComboBox();
 
-            cmb2.Items.Add(eResolucion.Standard);
-            cmb2.Items.Add(eResolucion.HD);
-            cmb2.Items.Add(eResolucion.UHD);
+            cmb2.Items.Add(eResolucionCamara.Mp10);
+            cmb2.Items.Add(eResolucionCamara.Mp12);
+            cmb2.Items.Add(eResolucionCamara.Mp15);
 
-            cmb1.Items.Add(eSistemaTV.AndroidTV);
-            cmb1.Items.Add(eSistemaTV.Linux);
-            cmb1.Items.Add(eSistemaTV.Tizen);
+            cmb1.Items.Add(eSistemaCelular.Android);
+            cmb1.Items.Add(eSistemaCelular.iOS);
+            cmb1.Items.Add(eSistemaCelular.WindowsPhone);
 
 
             cbx1.Visible = true;
@@ -110,9 +121,9 @@ namespace Formularios
         {
             if(rdbTelevisor.Checked)
             {
-                
-                //Deposito.AgregarProducto((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaTV)cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1);
                 //(eMarca marca, string modelo, eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart)
+                Deposito.AgregarProducto((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaTV)cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1);
+                
             }
         }
 
