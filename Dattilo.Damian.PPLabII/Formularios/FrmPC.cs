@@ -57,7 +57,7 @@ namespace Formularios
         {
             if (Validar())
             {
-                PC pc = new PC(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtMemoriaDisco.Text), int.Parse(txtMemoriaRam.Text),(eSistemaPC)cmbSistOp.SelectedItem, (eDisco)cmbDisco.SelectedItem);
+                PC pc = new PC((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtMemoriaDisco.Text), int.Parse(txtMemoriaRam.Text),(eSistemaPC)cmbSistOp.SelectedItem, (eDisco)cmbDisco.SelectedItem);
 
                 if (Deposito.BuscarProducto(pc) is not null)
                 {

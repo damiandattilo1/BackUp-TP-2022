@@ -71,7 +71,7 @@ namespace Formularios
             }
             if (Validar())
             {
-                Celular celular = new Celular(int.Parse(txtId.Text),(eMarca) cmbMarca.SelectedItem, txtModelo.Text,(eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text),int.Parse(txtMemoria.Text), (eSistemaCelular)cmbSistema.SelectedItem,(eResolucionCamara) cmbResolucion.SelectedItem, liberado);
+                Celular celular = new Celular((eMarca) cmbMarca.SelectedItem, txtModelo.Text,(eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text),int.Parse(txtMemoria.Text), (eSistemaCelular)cmbSistema.SelectedItem,(eResolucionCamara) cmbResolucion.SelectedItem, liberado);
                 if(Deposito.BuscarProducto(celular) is not null)
                 {
                     MessageBox.Show("El celular ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

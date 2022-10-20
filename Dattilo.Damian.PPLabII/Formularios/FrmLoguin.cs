@@ -87,18 +87,7 @@ namespace Formularios
             txtPassword.Text = Loguin.PassVendedor;
         }
 
-        private void FrmLoguin_Load(object sender, EventArgs e)
-        {
-            Celular c1 = new Celular(1234, eMarca.Samsung, "sj474",eTag.Telefonia, 80000, 128, eSistemaCelular.Android, eResolucionCamara.Mp12, true);
-            Televisor t2 = new Televisor(1444, eMarca.Philips, "ph8471",eTag.Audiovisual, 100000, 42, eSistemaTV.AndroidTV, eResolucion.UHD, true);
-            PC p3 = new PC(1818, eMarca.HP, "HP142",eTag.Informatica, 120000, 500, 8, eSistemaPC.Windows, eDisco.HDD);
-
-            Deposito.AgregarProducto(c1);
-            Deposito.AgregarProducto(t2);
-            Deposito.AgregarProducto(p3);
-
-
-        }
+        
 
         private void btnContador_Click(object sender, EventArgs e)
         {

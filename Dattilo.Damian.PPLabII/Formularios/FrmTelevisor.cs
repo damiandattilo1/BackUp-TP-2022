@@ -39,7 +39,7 @@ namespace Formularios
             }
             if (Validar())
             {
-                Televisor televisor = new Televisor(int.Parse(txtId.Text), (eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
+                Televisor televisor = new Televisor((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txtPulgadas.Text), (eSistemaTV)cmbSistema.SelectedItem, (eResolucion)cmbResolucion.SelectedItem, esSmart);
                 if (Deposito.BuscarProducto(televisor) is not null)
                 {
                     MessageBox.Show("El televisor ya esta ingresado en el comercio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

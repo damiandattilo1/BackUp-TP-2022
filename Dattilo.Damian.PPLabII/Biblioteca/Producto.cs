@@ -67,6 +67,8 @@ namespace Biblioteca
             set { tag = value; }
         }
 
+        
+
         /// <summary>
         /// Constructor privado que inicializa el stock
         /// </summary>
@@ -82,9 +84,8 @@ namespace Biblioteca
         /// <param name="marca"></param>
         /// <param name="modelo"></param>
         /// <param name="precio"></param>
-        public Producto(int id, eMarca marca, string modelo, eTag tag, double precio, int ventas) :this()
+        public Producto(eMarca marca, string modelo, eTag tag, double precio, int ventas) :this()
         {
-            this.id = id;
             this.marca = marca;
             this.modelo = modelo;
             this.tag = tag;

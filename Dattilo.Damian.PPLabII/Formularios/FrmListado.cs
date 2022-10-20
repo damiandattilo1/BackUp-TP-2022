@@ -29,9 +29,17 @@ namespace Formularios
             dataGridView1.DataSource = televisores;
 
             //Deshabilito los otros RadioButtons
-            txtRAM.Enabled = false;
-            txtResolucion.Enabled = false;
-            txtSmart.Enabled = true;
+            lbl1.Text = "EsSmart";
+            lbl2.Text = "Pulgadas";
+            lbl3.Text = "SistemaOperativo";
+            lbl4.Text = "Resolucion";
+
+            cbx1.Visible = true;
+            txt1.Visible = false;
+            txt2.Visible = true;
+            cmb1.Visible = true;
+            cmb2.Visible = true;
+            
         }
 
         private void rdbPc_CheckedChanged(object sender, EventArgs e)
@@ -42,9 +50,27 @@ namespace Formularios
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = pcs;
 
-            txtResolucion.Enabled = false;
-            txtSmart.Enabled = false;
-            txtRAM.Enabled = true;
+
+            //Deshabilito los otros RadioButtons
+            lbl1.Text = "MemoriaDisco";
+            lbl2.Text = "RAM";
+            lbl3.Text = "SistemaOperativo";
+            lbl4.Text = "Disco";
+
+            ClearComboBox();
+           /* cmbDisco.Items.Add(eDisco.SSD);
+            cmbDisco.Items.Add(eDisco.HDD);
+
+
+            cmbSistOp.Items.Add(eSistemaPC.Linux);
+            cmbSistOp.Items.Add(eSistemaPC.Windows);*/
+
+            cbx1.Visible = false;
+            txt1.Visible = true;
+            txt2.Visible = true;
+            cmb1.Visible = true;
+            cmb2.Visible = true;
+            
         }
 
         private void rdbCelular_CheckedChanged(object sender, EventArgs e)
@@ -55,9 +81,65 @@ namespace Formularios
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = celulares;
 
-            txtRAM.Enabled = false;
-            txtSmart.Enabled = false;
-            txtResolucion.Enabled = true;
+            //Deshabilito los otros RadioButtons
+            lbl1.Text = "EsLiberado";
+            lbl2.Text = "MEMORIA";
+            lbl3.Text = "SistemaOperativo";
+            lbl4.Text = "ResolucionCamara";
+
+            ClearComboBox();
+
+            cmb2.Items.Add(eResolucion.Standard);
+            cmb2.Items.Add(eResolucion.HD);
+            cmb2.Items.Add(eResolucion.UHD);
+
+            cmb1.Items.Add(eSistemaTV.AndroidTV);
+            cmb1.Items.Add(eSistemaTV.Linux);
+            cmb1.Items.Add(eSistemaTV.Tizen);
+
+
+            cbx1.Visible = true;
+            txt1.Visible = false;
+            txt2.Visible = true;
+            cmb1.Visible = true;
+            cmb2.Visible = true;
+            
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if(rdbTelevisor.Checked)
+            {
+                
+                //Deposito.AgregarProducto((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaTV)cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1);
+                //(eMarca marca, string modelo, eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart)
+            }
+        }
+
+        private void FrmListado_Load(object sender, EventArgs e)
+        {
+
+
+            ClearComboBox();
+
+            cmbMarca.Items.Add(eMarca.Sony);
+            cmbMarca.Items.Add(eMarca.HP);
+            cmbMarca.Items.Add(eMarca.Samsung);
+            cmbMarca.Items.Add(eMarca.Philips);
+
+            
+
+            cmbTag.Items.Add(eTag.Audiovisual);
+            cmbTag.Items.Add(eTag.Telefonia);
+            cmbTag.Items.Add(eTag.Informatica);
+        }
+
+        private void ClearComboBox()
+        {
+            cmbMarca.Items.Clear();
+            cmb1.Items.Clear();
+            cmb2.Items.Clear();
+            cmbTag.Items.Clear();
         }
     }
 }

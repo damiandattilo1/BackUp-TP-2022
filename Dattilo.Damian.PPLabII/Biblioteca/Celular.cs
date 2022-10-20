@@ -59,7 +59,7 @@ namespace Biblioteca
         /// <param name="sistemaOperativo"></param>
         /// <param name="resolucionCamara"></param>
         /// <param name="esLiberado"></param>
-        public Celular(int id, eMarca marca, string modelo, eTag tag, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado) : base(id, marca, modelo,tag, precio, 3)
+        public Celular(eMarca marca, string modelo, eTag tag, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado) : base(marca, modelo,tag, precio, 3)
         {
             this.memoria = memoria;
             this.sistemaOperativo = sistemaOperativo;
@@ -94,6 +94,8 @@ namespace Biblioteca
 
             return sb.ToString();
         }
+
+        
 
         /// <summary>
         /// Sobrecarga de operador == Dos celulares son iguales si sus productos y sus modelos son iguales

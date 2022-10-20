@@ -14,6 +14,7 @@ namespace Biblioteca
         private static List<Producto> productos;
         private static int capacidadMaxima;
         private static string nombreComercio;
+        private static int id;
 
         /// <summary>
         /// Propiedades
@@ -22,6 +23,12 @@ namespace Biblioteca
         {
             get { return productos; }
 
+        }
+
+        public static int Id
+        {
+            get { return id; }
+            set { id = value; }
         }
 
         public static int CapacidadMaxima
@@ -46,6 +53,7 @@ namespace Biblioteca
         {
             capacidadMaxima = 50;
             productos = new List<Producto>();
+            Datos.CargarProductos();
             nombreComercio = "Electronica Ultra";
         }
 
@@ -64,6 +72,8 @@ namespace Biblioteca
                 aux = Deposito.BuscarProducto(p);
                 if (aux is null)
                 {
+                    id++;
+                    p.Id = id;
                     Deposito.Productos.Add(p);
 
                 }
@@ -76,6 +86,28 @@ namespace Biblioteca
             }
             return false;
         }
+
+        public static bool AgregarProducto(eMarca marca, string modelo, eTag tag, double precio, int memoria, eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado)
+        {
+            Celular celular = new Celular(marca, modelo, tag, precio, memoria, sistemaOperativo, resolucionCamara, esLiberado);
+
+            return AgregarProducto(celular);
+        }
+
+        public static bool AgregarProducto(eMarca marca, string modelo, eTag tag, double precio, int memoriaDisco, int ram, eSistemaPC sistemaOperativo, eDisco disco)
+        {
+            PC pc = new PC(marca, modelo, tag, precio, memoriaDisco, ram, sistemaOperativo, disco);
+
+            return AgregarProducto(pc);
+        }
+
+        public static bool AgregarProducto(eMarca marca, string modelo, eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart)
+        {
+            Televisor televisor = new Televisor(marca, modelo, tag, precio, pulgadas, sistemaOperativo, resolucion, esSmart);
+
+            return AgregarProducto(televisor);
+        }
+
 
         /// <summary>
         /// Sobrecarga del operador - que quita stock del deposito o, si el stock llega a cero, lo quita mediante el metodo ModificarStock

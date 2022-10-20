@@ -121,7 +121,7 @@
             this.Name = "FrmLoguin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loguin";
-            this.Load += new System.EventHandler(this.FrmLoguin_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
