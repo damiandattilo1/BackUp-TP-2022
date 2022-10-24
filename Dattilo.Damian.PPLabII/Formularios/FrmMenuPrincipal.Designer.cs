@@ -63,6 +63,7 @@
             this.Name = "FrmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuPrincipal";
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.ResumeLayout(false);
 
         }

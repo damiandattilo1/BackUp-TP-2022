@@ -31,6 +31,7 @@ namespace Formularios
         private void FrmConfirmarVenta_Load(object sender, EventArgs e)
         {
             rtbMostrarProducto.Text = producto.ToString();
+            BackColor = Cuenta.ColorFormulario;
         }
 
         /// <summary>

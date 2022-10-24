@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,25 @@ namespace Biblioteca
     public static class Cuenta
     {
         private static List<Usuario> usuarios;
+        private static Usuario usuarioActivo;
+        private static Color color;
 
         static Cuenta()
         {
             usuarios = new List<Usuario>();
             Inicializar();
             
+        }
+
+        public static Color ColorFormulario
+        {
+            get { return color; }
+            set { color = value; }
+        }
+        public static Usuario UsuarioActivo
+        {
+            get { return usuarioActivo; }
+            set { usuarioActivo = value; }
         }
 
         public static List<Usuario> Usuarios
@@ -39,12 +53,18 @@ namespace Biblioteca
                 {
                     if (mail == item.Mail && password == item.Password)
                     {
+                        usuarioActivo = item;
                         return item;
                     }
+
                 }
             }
             return new Usuario("", "", eTipoUsuario.Invalido);
         }
+
+
+
+        
 
 
 

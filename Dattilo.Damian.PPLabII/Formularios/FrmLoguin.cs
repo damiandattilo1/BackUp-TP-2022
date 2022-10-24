@@ -33,7 +33,9 @@ namespace Formularios
             {
                 case eTipoUsuario.Dueño:
                     {
+                        
                         FrmMenuPrincipal menu = new FrmMenuPrincipal();
+                        Cuenta.ColorFormulario = Color.Aquamarine;
                         this.Hide();
                         menu.ShowDialog();
                         this.Close();
@@ -44,6 +46,7 @@ namespace Formularios
                     {
                         this.Hide();
                         FrmVenta frmVenta = new FrmVenta(false);
+                        Cuenta.ColorFormulario = Color.Beige;
                         frmVenta.ShowDialog();
                         this.Close();
                         break;
@@ -52,6 +55,7 @@ namespace Formularios
                     {
                         this.Hide();
                         FrmEstadisticas frmEstadisticas = new FrmEstadisticas();
+                        Cuenta.ColorFormulario = Color.Red;
                         frmEstadisticas.ShowDialog();
                         this.Close();
                         break;
@@ -72,8 +76,8 @@ namespace Formularios
 
         private void btnDueño_Click(object sender, EventArgs e)
         {
-            txtUsuario.Text = Loguin.UsuDuenio;
-            txtPassword.Text = Loguin.PassDuenio;
+            txtUsuario.Text = Cuenta.Usuarios.Where((a) => a.TipoUsuario == eTipoUsuario.Dueño).First().Mail.ToString();
+            txtPassword.Text = Cuenta.Usuarios.Where((a) => a.TipoUsuario == eTipoUsuario.Dueño).First().Password.ToString();
         }
 
         /// <summary>
@@ -83,16 +87,18 @@ namespace Formularios
         /// <param name="e"></param>
         private void btnVendedor_Click(object sender, EventArgs e)
         {
-            txtUsuario.Text = Loguin.UsuVendedor;
-            txtPassword.Text = Loguin.PassVendedor;
+
+            txtUsuario.Text = Cuenta.Usuarios.Where((a) => a.TipoUsuario == eTipoUsuario.Vendedor).First().Mail.ToString();
+            txtPassword.Text = Cuenta.Usuarios.Where((a) => a.TipoUsuario == eTipoUsuario.Vendedor).First().Password.ToString();
         }
 
         
 
         private void btnContador_Click(object sender, EventArgs e)
         {
-            txtUsuario.Text = Loguin.UsuContador;
-            txtPassword.Text = Loguin.PassContador;
+
+            txtUsuario.Text = Cuenta.Usuarios.Where((a) => a.TipoUsuario == eTipoUsuario.Contador).First().Mail.ToString();
+            txtPassword.Text = Cuenta.Usuarios.Where((a) => a.TipoUsuario == eTipoUsuario.Contador).First().Password.ToString();
         }
 
         

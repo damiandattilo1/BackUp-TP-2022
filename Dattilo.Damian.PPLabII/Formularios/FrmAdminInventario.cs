@@ -32,6 +32,7 @@ namespace Formularios
         private void FrmAdminInventario_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            BackColor = Cuenta.ColorFormulario;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

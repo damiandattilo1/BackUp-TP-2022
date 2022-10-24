@@ -56,7 +56,7 @@ namespace Biblioteca
         /// <param name="pulgadas"></param>
         /// <param name="sistemaOperativo"></param>
         /// <param name="resolucion"></param>
-        public Televisor(eMarca marca, string modelo,eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart) : base(marca, modelo, tag, precio, 4)
+        public Televisor(eMarca marca, string modelo,eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart, int venta) : base(marca, modelo, tag, precio, venta)
         {
             this.pulgadas = pulgadas;
             this.sistemaOperativo = sistemaOperativo;

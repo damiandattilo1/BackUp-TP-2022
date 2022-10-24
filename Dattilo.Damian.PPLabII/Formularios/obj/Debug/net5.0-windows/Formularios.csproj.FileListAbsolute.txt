@@ -66,15 +66,11 @@ C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\b
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\bin\Debug\net5.0-windows\Biblioteca.pdb
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.AssemblyReference.cache
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmAdminInventario.resources
-C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmCelular.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmConfirmarVenta.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmEstadisticas.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmListado.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmLoguin.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmMenuPrincipal.resources
-C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmNuevoProducto.resources
-C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmPC.resources
-C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmTelevisor.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.FrmVenta.resources
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.csproj.GenerateResource.cache
 C:\Users\usu\Desktop\Dattilo.Damian.PPLabII\Dattilo.Damian.PPLabII\Formularios\obj\Debug\net5.0-windows\Formularios.GeneratedMSBuildEditorConfig.editorconfig

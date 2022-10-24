@@ -59,7 +59,7 @@ namespace Biblioteca
         /// <param name="sistemaOperativo"></param>
         /// <param name="resolucionCamara"></param>
         /// <param name="esLiberado"></param>
-        public Celular(eMarca marca, string modelo, eTag tag, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado) : base(marca, modelo,tag, precio, 3)
+        public Celular(eMarca marca, string modelo, eTag tag, double precio, int memoria,eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado, int ventas) : base(marca, modelo,tag, precio, ventas)
         {
             this.memoria = memoria;
             this.sistemaOperativo = sistemaOperativo;

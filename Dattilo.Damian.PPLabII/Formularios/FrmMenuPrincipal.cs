@@ -46,5 +46,9 @@ namespace Formularios
             this.Show();
         }
 
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            BackColor = Cuenta.ColorFormulario;
+        }
     }
 }

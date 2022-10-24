@@ -22,7 +22,8 @@ namespace Formularios
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
-            if(!esDueño)
+            BackColor = Cuenta.ColorFormulario;
+            if (!esDueño)
             {
                 btnVolver.Hide();
             }

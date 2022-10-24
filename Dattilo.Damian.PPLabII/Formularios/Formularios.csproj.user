@@ -4,9 +4,6 @@
     <Compile Update="FrmAdminInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmCelular.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FrmConfirmarVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,15 +17,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmNuevoProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmPC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FrmTelevisor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmVenta.cs">

@@ -204,6 +204,7 @@ namespace Formularios
 
         private void FrmEstadisticas_Load(object sender, EventArgs e)
         {
+            BackColor = Cuenta.ColorFormulario;
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Cantidad de ventas: {this.CalcularCantidadVentas()}");

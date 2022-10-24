@@ -24,13 +24,9 @@ namespace Formularios
         {
 
             //Retorno una lista de los televisores que hay en el deposito
-            List<Televisor> televisores = new List<Televisor>(Deposito.Productos.Where((a) => a is Televisor).ToList().Cast<Televisor>());
+            RefrescarDGV<Televisor>();
 
-            //Actualizo el DataGridView
-            dgvProductos.DataSource = null;
-            dgvProductos.DataSource = televisores;
-            
-            
+
 
             //Deshabilito los otros RadioButtons
             lbl1.Text = "EsSmart";
@@ -60,10 +56,7 @@ namespace Formularios
         private void rdbPc_CheckedChanged(object sender, EventArgs e)
         {
 
-            List<PC> pcs = new List<PC>(Deposito.Productos.Where((a) => a is PC).ToList().Cast<PC>());
-
-            dgvProductos.DataSource = null;
-            dgvProductos.DataSource = pcs;
+            RefrescarDGV<PC>();
 
 
             //Deshabilito los otros RadioButtons
@@ -91,10 +84,7 @@ namespace Formularios
         private void rdbCelular_CheckedChanged(object sender, EventArgs e)
         {
 
-            List<Celular> celulares = new List<Celular>(Deposito.Productos.Where((a) => a is Celular).ToList().Cast<Celular>());
-
-            dgvProductos.DataSource = null;
-            dgvProductos.DataSource = celulares;
+            RefrescarDGV<Celular>();
 
             //Deshabilito los otros RadioButtons
             lbl1.Text = "EsLiberado";
@@ -129,17 +119,17 @@ namespace Formularios
                 if(rdbTelevisor.Checked)
                 {
                 
-                    producto = new Televisor((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text),(eSistemaTV) cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1.Checked);
+                    producto = new Televisor((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text),(eSistemaTV) cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1.Checked, 0);
                 
 
                 }
                 else if (rdbCelular.Checked)
                 {
-                    producto = new Celular((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaCelular)cmb1.SelectedItem, (eResolucionCamara)cmb2.SelectedItem, cbx1.Checked);
+                    producto = new Celular((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaCelular)cmb1.SelectedItem, (eResolucionCamara)cmb2.SelectedItem, cbx1.Checked, 0);
                 }
                 else
                 {
-                    producto = new PC((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), int.Parse(txt2.Text), (eSistemaPC)cmb1.SelectedItem, (eDisco)cmb2.SelectedItem);
+                    producto = new PC((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), int.Parse(txt2.Text), (eSistemaPC)cmb1.SelectedItem, (eDisco)cmb2.SelectedItem, 0);
                 }
                 Deposito.AgregarProducto(producto);
 
@@ -154,7 +144,7 @@ namespace Formularios
 
         private void FrmListado_Load(object sender, EventArgs e)
         {
-
+            BackColor = Cuenta.ColorFormulario;
             ClearComboBox();
 
             cmbMarca.Items.Add(eMarca.Sony);
@@ -221,6 +211,15 @@ namespace Formularios
             {
                 e.Handled = false;
             }
+        }
+
+        private void RefrescarDGV<T>()
+        {
+            List<T> producto = new List<T>(Deposito.Productos.Where((a) => a is T).ToList().Cast<T>());
+
+            //Actualizo el DataGridView
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = producto;
         }
     }
 }
