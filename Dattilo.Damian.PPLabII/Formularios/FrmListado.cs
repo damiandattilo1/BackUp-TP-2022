@@ -13,9 +13,11 @@ namespace Formularios
 {
     public partial class FrmListado : Form
     {
+        
         public FrmListado()
         {
             InitializeComponent();
+            
         }
 
         private void rdbTelevisor_CheckedChanged(object sender, EventArgs e)
@@ -25,8 +27,10 @@ namespace Formularios
             List<Televisor> televisores = new List<Televisor>(Deposito.Productos.Where((a) => a is Televisor).ToList().Cast<Televisor>());
 
             //Actualizo el DataGridView
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = televisores;
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = televisores;
+            
+            
 
             //Deshabilito los otros RadioButtons
             lbl1.Text = "EsSmart";
@@ -58,8 +62,8 @@ namespace Formularios
 
             List<PC> pcs = new List<PC>(Deposito.Productos.Where((a) => a is PC).ToList().Cast<PC>());
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = pcs;
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = pcs;
 
 
             //Deshabilito los otros RadioButtons
@@ -89,8 +93,8 @@ namespace Formularios
 
             List<Celular> celulares = new List<Celular>(Deposito.Productos.Where((a) => a is Celular).ToList().Cast<Celular>());
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = celulares;
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = celulares;
 
             //Deshabilito los otros RadioButtons
             lbl1.Text = "EsLiberado";
@@ -98,8 +102,8 @@ namespace Formularios
             lbl3.Text = "SistemaOperativo";
             lbl4.Text = "ResolucionCamara";
 
-            ClearComboBox();
 
+            ClearComboBox();
             cmb2.Items.Add(eResolucionCamara.Mp10);
             cmb2.Items.Add(eResolucionCamara.Mp12);
             cmb2.Items.Add(eResolucionCamara.Mp15);
@@ -119,17 +123,37 @@ namespace Formularios
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(rdbTelevisor.Checked)
+            Producto producto;
+            if (Validar())
             {
-                //(eMarca marca, string modelo, eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart)
-                Deposito.AgregarProducto((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaTV)cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1);
+                if(rdbTelevisor.Checked)
+                {
                 
+                    producto = new Televisor((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text),(eSistemaTV) cmb1.SelectedItem, (eResolucion)cmb2.SelectedItem, cbx1.Checked);
+                
+
+                }
+                else if (rdbCelular.Checked)
+                {
+                    producto = new Celular((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), (eSistemaCelular)cmb1.SelectedItem, (eResolucionCamara)cmb2.SelectedItem, cbx1.Checked);
+                }
+                else
+                {
+                    producto = new PC((eMarca)cmbMarca.SelectedItem, txtModelo.Text, (eTag)cmbTag.SelectedItem, double.Parse(txtPrecio.Text), int.Parse(txt2.Text), int.Parse(txt2.Text), (eSistemaPC)cmb1.SelectedItem, (eDisco)cmb2.SelectedItem);
+                }
+                Deposito.AgregarProducto(producto);
+
             }
+            else
+            {
+                MessageBox.Show("Ingrese correctamente los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            
         }
 
         private void FrmListado_Load(object sender, EventArgs e)
         {
-
 
             ClearComboBox();
 
@@ -147,10 +171,56 @@ namespace Formularios
 
         private void ClearComboBox()
         {
-            cmbMarca.Items.Clear();
             cmb1.Items.Clear();
             cmb2.Items.Clear();
-            cmbTag.Items.Clear();
+            
+        }
+
+        private bool Validar()
+        {
+
+            if ( cmbMarca is not null && txtPrecio is not null && txtModelo is not null && cmbTag is not null && txt1 is not null && txt2 is not null && cmb1 is not null && cmb2 is not null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void txt1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void txt2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
         }
     }
 }

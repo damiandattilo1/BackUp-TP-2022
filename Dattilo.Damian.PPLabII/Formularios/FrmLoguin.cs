@@ -95,12 +95,6 @@ namespace Formularios
             txtPassword.Text = Loguin.PassContador;
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmListado frmListado = new FrmListado();
-            frmListado.ShowDialog();
-            this.Close();
-        }
+        
     }
 }

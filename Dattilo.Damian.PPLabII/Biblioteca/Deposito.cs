@@ -86,27 +86,8 @@ namespace Biblioteca
             }
             return false;
         }
+      
 
-        public static bool AgregarProducto(eMarca marca, string modelo, eTag tag, double precio, int memoria, eSistemaCelular sistemaOperativo, eResolucionCamara resolucionCamara, bool esLiberado)
-        {
-            Celular celular = new Celular(marca, modelo, tag, precio, memoria, sistemaOperativo, resolucionCamara, esLiberado);
-
-            return AgregarProducto(celular);
-        }
-
-        public static bool AgregarProducto(eMarca marca, string modelo, eTag tag, double precio, int memoriaDisco, int ram, eSistemaPC sistemaOperativo, eDisco disco)
-        {
-            PC pc = new PC(marca, modelo, tag, precio, memoriaDisco, ram, sistemaOperativo, disco);
-
-            return AgregarProducto(pc);
-        }
-
-        public static bool AgregarProducto(eMarca marca, string modelo, eTag tag, double precio, int pulgadas, eSistemaTV sistemaOperativo, eResolucion resolucion, bool esSmart)
-        {
-            Televisor televisor = new Televisor(marca, modelo, tag, precio, pulgadas, sistemaOperativo, resolucion, esSmart);
-
-            return AgregarProducto(televisor);
-        }
 
 
         /// <summary>

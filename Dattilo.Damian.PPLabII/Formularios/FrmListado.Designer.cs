@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.rdbTelevisor = new System.Windows.Forms.RadioButton();
             this.rdbPc = new System.Windows.Forms.RadioButton();
             this.rdbCelular = new System.Windows.Forms.RadioButton();
@@ -51,19 +51,19 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txt1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 162);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1190, 293);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(40, 162);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 29;
+            this.dgvProductos.Size = new System.Drawing.Size(1190, 293);
+            this.dgvProductos.TabIndex = 0;
             // 
             // rdbTelevisor
             // 
@@ -249,6 +249,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(125, 27);
             this.txtPrecio.TabIndex = 33;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txt2
             // 
@@ -256,6 +257,7 @@
             this.txt2.Name = "txt2";
             this.txt2.Size = new System.Drawing.Size(151, 27);
             this.txt2.TabIndex = 34;
+            this.txt2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt2_KeyPress);
             // 
             // txt1
             // 
@@ -263,6 +265,7 @@
             this.txt1.Name = "txt1";
             this.txt1.Size = new System.Drawing.Size(151, 27);
             this.txt1.TabIndex = 35;
+            this.txt1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt1_KeyPress);
             // 
             // FrmListado
             // 
@@ -289,12 +292,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProductos);
             this.Name = "FrmListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmListado";
             this.Load += new System.EventHandler(this.FrmListado_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -304,7 +307,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.RadioButton rdbTelevisor;
         private System.Windows.Forms.RadioButton rdbPc;
         private System.Windows.Forms.RadioButton rdbCelular;

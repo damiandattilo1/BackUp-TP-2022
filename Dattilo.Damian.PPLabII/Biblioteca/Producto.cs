@@ -134,7 +134,7 @@ namespace Biblioteca
         {
             if (p1 is not null && p2 is not null)
             {
-                return p1.Id == p2.Id;
+                return p1.Marca == p2.Marca && p1.Modelo == p2.Modelo;
             }
             return false;
         }

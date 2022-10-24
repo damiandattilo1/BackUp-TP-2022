@@ -77,9 +77,9 @@ namespace Formularios
         /// <param name="e"></param>
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            FrmNuevoProducto frmNuevoProducto = new FrmNuevoProducto();
+            FrmListado frmListado = new FrmListado();
             this.Hide();
-            frmNuevoProducto.ShowDialog();
+            frmListado.ShowDialog();
             CargarDatos();
             this.Show();
         }

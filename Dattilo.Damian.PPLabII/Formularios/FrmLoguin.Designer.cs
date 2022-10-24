@@ -35,7 +35,6 @@
             this.btnVendedor = new System.Windows.Forms.Button();
             this.btnContador = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnVentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -95,23 +94,12 @@
             this.btnContador.UseVisualStyleBackColor = true;
             this.btnContador.Click += new System.EventHandler(this.btnContador_Click);
             // 
-            // btnVentas
-            // 
-            this.btnVentas.Location = new System.Drawing.Point(62, 309);
-            this.btnVentas.Name = "btnVentas";
-            this.btnVentas.Size = new System.Drawing.Size(150, 49);
-            this.btnVentas.TabIndex = 6;
-            this.btnVentas.Text = "Ventas";
-            this.btnVentas.UseVisualStyleBackColor = true;
-            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
-            // 
             // FrmLoguin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnVentas);
             this.Controls.Add(this.btnContador);
             this.Controls.Add(this.btnVendedor);
             this.Controls.Add(this.btnDueño);
@@ -121,7 +109,6 @@
             this.Name = "FrmLoguin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loguin";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +123,5 @@
         private System.Windows.Forms.Button btnVendedor;
         private System.Windows.Forms.Button btnContador;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btnVentas;
     }
 }
