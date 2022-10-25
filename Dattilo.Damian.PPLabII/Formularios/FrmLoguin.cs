@@ -20,6 +20,7 @@ namespace Formularios
         public FrmLoguin()
         {
             InitializeComponent();
+            Datos.CargarProductos();
         }
 
         /// <summary>

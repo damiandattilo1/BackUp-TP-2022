@@ -53,7 +53,7 @@ namespace Biblioteca
         {
             capacidadMaxima = 50;
             productos = new List<Producto>();
-            Datos.CargarProductos();
+            
             nombreComercio = "Electronica Ultra";
         }
 

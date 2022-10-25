@@ -43,7 +43,7 @@ namespace Biblioteca
             set { disco = value; }
         }
 
-        public PC(eMarca marca, string modelo, eTag tag, double precio, int memoriaDisco, int ram, eSistemaPC sistemaOperativo, eDisco disco, int ventas) : base(marca, modelo,tag,  precio, ventas)
+        public PC(eMarca marca, string modelo, eTag tag, double precio, int memoriaDisco, int ram, eSistemaPC sistemaOperativo, eDisco disco) : base(marca, modelo,tag,  precio)
         {
             this.memoriaDisco = memoriaDisco;
             this.ram = ram;

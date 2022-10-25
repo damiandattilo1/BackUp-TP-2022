@@ -25,9 +25,9 @@ namespace Formularios
         private int CalcularCantidadVentas()
         {
             int cont = 0;
-            foreach(Producto item in Deposito.Productos)
+            foreach(Venta item in Datos.Ventas)
             {
-                cont += item.Ventas;
+                cont ++;
             }
             return cont;
         }
@@ -38,20 +38,13 @@ namespace Formularios
 
             int cantAudio = 0;
 
-            foreach(Producto item in Deposito.Productos)
+            foreach(Venta item in Datos.Ventas)
             {
-                if(item.Ventas > 0)
+                if(item.Producto.Tag == eTag.Audiovisual)
                 {
-                    switch (item.Tag)
-                    {
-                        case eTag.Audiovisual:
-                            cantAudio += item.Ventas;
-                            precioAudio += (item.Precio) * item.Ventas;
-                            break;
-                        default:
-                            break;
-
-                    }
+                    cantAudio++;
+                    precioAudio += (item.Producto.Precio);
+                     
                 }
             }
 
@@ -64,20 +57,13 @@ namespace Formularios
 
             int cantInfo = 0;
 
-            foreach (Producto item in Deposito.Productos)
+            foreach (Venta item in Datos.Ventas)
             {
-                if (item.Ventas > 0)
+                if (item.Producto.Tag == eTag.Informatica)
                 {
-                    switch (item.Tag)
-                    {
-                        case eTag.Informatica:
-                            cantInfo += item.Ventas;
-                            precioInfo += (item.Precio) * item.Ventas;
-                            break;
-                        default:
-                            break;
+                    cantInfo++;
+                    precioInfo += (item.Producto.Precio);
 
-                    }
                 }
             }
 
@@ -90,20 +76,13 @@ namespace Formularios
 
             int cantTelefonia = 0;
 
-            foreach (Producto item in Deposito.Productos)
+            foreach (Venta item in Datos.Ventas)
             {
-                if (item.Ventas > 0)
+                if (item.Producto.Tag == eTag.Telefonia)
                 {
-                    switch (item.Tag)
-                    {
-                        case eTag.Telefonia:
-                            cantTelefonia += item.Ventas;
-                            precioTelefonia += (item.Precio) * item.Ventas;
-                            break;
-                        default:
-                            break;
+                    cantTelefonia++;
+                    precioTelefonia += (item.Producto.Precio);
 
-                    }
                 }
             }
 
@@ -113,38 +92,51 @@ namespace Formularios
         private double CalcularGananciaTotal()
         {
             double acumGanancia = 0;
-            foreach(Producto item in Deposito.Productos)
+            foreach(Venta item in Datos.Ventas)
             {
-                acumGanancia += (item.Ventas * item.Precio);
+                acumGanancia += (item.Producto.Precio);
             }
 
             return acumGanancia;
+        }
+
+        private int CalcularVentas(Producto producto)
+        {
+            int ventas = 0;
+
+            foreach(Venta item in Datos.Ventas)
+            {
+                if (item.Producto == producto)
+                {
+                    ventas++;
+                }
+            }
+            return ventas;
         }
 
         private Producto CalcularMayorVendidoAudiovisual()
         {
             Producto masVendido = null;
             bool primero = false;
-            foreach(Producto item in Deposito.Productos)
+            foreach(Venta item in Datos.Ventas)
             {
-                if(item.Tag == eTag.Telefonia)
+                if(item.Producto.Tag == eTag.Audiovisual)
                 {
                     if(primero == false)
                     {
-                        masVendido = item;
+                        masVendido = item.Producto;
                         primero = true;
                     }
                     else
                     {
-                        if(item.Ventas > masVendido.Ventas && item.Tag == eTag.Audiovisual)
+                        if(CalcularVentas(item.Producto) > CalcularVentas(masVendido))
                         {
-                            masVendido = item;
+                            masVendido = item.Producto;
                         }
                     }
 
                 }
             }
-
             return masVendido;
         }
 
@@ -152,26 +144,25 @@ namespace Formularios
         {
             Producto masVendido = null;
             bool primero = false;
-            foreach (Producto item in Deposito.Productos)
+            foreach (Venta item in Datos.Ventas)
             {
-                if(item.Tag == eTag.Informatica)
+                if (item.Producto.Tag == eTag.Informatica)
                 {
                     if (primero == false)
                     {
-                        masVendido = item;
+                        masVendido = item.Producto;
                         primero = true;
                     }
                     else
                     {
-                        if (item.Ventas > masVendido.Ventas)
+                        if (CalcularVentas(item.Producto) > CalcularVentas(masVendido))
                         {
-                            masVendido = item;
+                            masVendido = item.Producto;
                         }
                     }
 
                 }
             }
-
             return masVendido;
         }
 
@@ -179,26 +170,25 @@ namespace Formularios
         {
             Producto masVendido = null;
             bool primero = false;
-            foreach (Producto item in Deposito.Productos)
+            foreach (Venta item in Datos.Ventas)
             {
-                if (item.Tag == eTag.Telefonia)
+                if (item.Producto.Tag == eTag.Telefonia)
                 {
                     if (primero == false)
                     {
-                        masVendido = item;
+                        masVendido = item.Producto;
                         primero = true;
                     }
                     else
                     {
-                        if (item.Ventas > masVendido.Ventas)
+                        if (CalcularVentas(item.Producto) > CalcularVentas(masVendido))
                         {
-                            masVendido = item;
+                            masVendido = item.Producto;
                         }
                     }
 
                 }
             }
-
             return masVendido;
         }
 
@@ -208,8 +198,9 @@ namespace Formularios
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Cantidad de ventas: {this.CalcularCantidadVentas()}");
-
+            
             sb.AppendLine($"\nMas vendido de Audiovisual: {this.CalcularMayorVendidoAudiovisual().Marca} {this.CalcularMayorVendidoAudiovisual().Modelo}");
+            
             sb.AppendLine($"Mas vendido de Informatica: {this.CalcularMayorVendidoInformatica().Marca} {this.CalcularMayorVendidoInformatica().Modelo}");
             sb.AppendLine($"Mas vendido de Telefonia: {this.CalcularMayorVendidoTelefonia().Marca} {this.CalcularMayorVendidoTelefonia().Modelo}");
 

@@ -42,7 +42,7 @@ namespace Formularios
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             producto.Stock--;
-            producto.Ventas++;
+            Datos.Ventas.Add(new Venta(producto, DateTime.Now));
             this.Close();
         }
     }
