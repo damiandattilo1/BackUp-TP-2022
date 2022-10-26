@@ -60,9 +60,8 @@ namespace Biblioteca
         /// <summary>
         /// Sobrecarga del operador + que agrega un producto al deposito o si el producto ya existe, aumenta su stock mediante el metodo ModificarStock
         /// </summary>
-        /// <param name="d"></param> deposito
-        /// <param name="p"></param> producto
-        /// <returns></returns>
+        /// <param name="p"></param> el producto a agregar
+        /// <returns></returns> booleano indicando si el producto se pudo agregar o no
         public static bool AgregarProducto(Producto p)
         {
             Producto aux;
@@ -119,7 +118,7 @@ namespace Biblioteca
                 {
                     if (p == item)
                     {
-                        return p;
+                        return item;
                     }
                 }
             }

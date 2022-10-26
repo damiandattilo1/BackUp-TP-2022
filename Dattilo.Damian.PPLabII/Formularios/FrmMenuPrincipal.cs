@@ -50,5 +50,13 @@ namespace Formularios
         {
             BackColor = Cuenta.ColorFormulario;
         }
+
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            FrmHistorial frmHistorial = new FrmHistorial();
+            this.Hide();
+            frmHistorial.ShowDialog();
+            this.Show();
+        }
     }
 }

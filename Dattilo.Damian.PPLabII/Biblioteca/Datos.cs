@@ -6,24 +6,38 @@ using System.Threading.Tasks;
 
 namespace Biblioteca
 {
+
+    /// <summary>
+    /// Clase estatica para realizar el hardcodeo
+    /// </summary>
     public static class Datos
     {
+        /// <summary>
+        /// lista de ventas
+        /// </summary>
         private static List<Venta> ventas;
 
 
-        
+        /// <summary>
+        /// propiedad
+        /// </summary>
         public static List<Venta> Ventas
         {
             get { return ventas; }
             set { ventas = value; }
         }
 
+        /// <summary>
+        /// constructor estatico
+        /// </summary>
         static Datos()
         {
             ventas = new List<Venta>();
-            
-        
         }
+
+        /// <summary>
+        /// carga productos y ventas hardcodeadas
+        /// </summary>
         public static void CargarProductos()
         {
             Celular c1 = new Celular(eMarca.Samsung, "sj474", eTag.Telefonia, 80000, 128, eSistemaCelular.Android, eResolucionCamara.Mp12, true);

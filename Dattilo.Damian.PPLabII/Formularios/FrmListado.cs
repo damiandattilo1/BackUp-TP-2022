@@ -82,6 +82,7 @@ namespace Formularios
 
         private void AgregarProducto()
         {
+
             Producto producto;
             if (Validar())
             {
@@ -103,10 +104,9 @@ namespace Formularios
 
                 Deposito.AgregarProducto(producto);
 
+                RefrescarDGV();
 
-                ModificarUI();
-
-
+                Console.Beep();
             }
             else
             {
@@ -120,6 +120,27 @@ namespace Formularios
 
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = producto;
+        }
+
+        private void RefrescarDGV()
+        {
+            RadioButton? buttons = groupBox1.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked);
+
+            if (buttons is not null)
+            {
+                if (buttons.Equals(rdbTelevisor))
+                {
+                    RefrescarDGV<Televisor>();
+                }
+                else if (buttons.Equals(rdbCelular))
+                {
+                    RefrescarDGV<Celular>();
+                }
+                else if (buttons.Equals(rdbPc))
+                {
+                    RefrescarDGV<PC>();
+                }
+            }
         }
 
         private void ModificarUI()
@@ -155,9 +176,9 @@ namespace Formularios
                     cmb2.Visible = true;
                 }
 
-                if (buttons.Equals(rdbCelular))
+                if (buttons.Equals(rdbPc))
                 {
-                    RefrescarDGV<Celular>();
+                    RefrescarDGV<PC>();
 
 
                     lbl1.Text = "MemoriaDisco";
@@ -180,9 +201,9 @@ namespace Formularios
                     cmb2.Visible = true;
                 }
 
-                if (buttons.Equals(rdbPc))
+                if (buttons.Equals(rdbCelular))
                 {
-                    RefrescarDGV<PC>();
+                    RefrescarDGV<Celular>();
 
                     lbl1.Text = "EsLiberado";
                     lbl2.Text = "MEMORIA";

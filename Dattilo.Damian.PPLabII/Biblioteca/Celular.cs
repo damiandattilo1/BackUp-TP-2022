@@ -50,7 +50,6 @@ namespace Biblioteca
         /// <summary>
         /// Constructor publico de celular que reutiliza el constructor de la clase base
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="marca"></param>
         /// <param name="modelo"></param>
         /// <param name="tag"></param>

@@ -30,6 +30,7 @@
         {
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVenta = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInventario
@@ -52,12 +53,23 @@
             this.btnVenta.UseVisualStyleBackColor = true;
             this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
+            // btnHistorial
+            // 
+            this.btnHistorial.Location = new System.Drawing.Point(289, 308);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(218, 72);
+            this.btnHistorial.TabIndex = 2;
+            this.btnHistorial.Text = "Historial";
+            this.btnHistorial.UseVisualStyleBackColor = true;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnVenta);
             this.Controls.Add(this.btnInventario);
             this.Name = "FrmMenuPrincipal";
@@ -72,5 +84,6 @@
 
         private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnVenta;
+        private System.Windows.Forms.Button btnHistorial;
     }
 }
